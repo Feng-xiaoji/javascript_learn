@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Image Gallery</title>
+</head>
+<body>
+  <h1>Photo list</h1>
+  <ul>
+    <li>
+      <a href="images/fireWork.jpg" onclick="showPic(this);
+      return false;" title="A firework display">FireWork</a>
+    </li>
+    <li>
+      <a href="images/coffee.jpg" onclick="showPic(this);
+      return false;" title="A cup of coffee">Coffee</a>
+    </li>
+    <li>
+      <a href="images/rose.jpg" onclick="showPic(this);
+      return false;" title="A red rose like fire">Rose</a>
+    </li>
+    <li>
+      <a href="images/bigben.jpg" onclick="showPic(this);
+      return false;" title="A big Ben display">BigBen</a>
+    </li>
+  </ul>
+  <img id="placeholder" src ="images/placeholder.jpg" alt = "my Photo list " />
+  <p id ="desccription">one of choosen</p>
+  <script type="text/javascript" src="showPic.js">
+  alert(description.childNodes[0].nodeValue);
+  </script>
+</body>
+</html>

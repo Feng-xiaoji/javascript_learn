@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      Shopping list
+    </title>
+    <!-- <style>
+      body{
+        color:white;
+        background-color: black;
+      }
+    </style> -->
+  </head>
+  <body>
+    <h1>What to buy?</h1>
+    <p title = "a gentle reminder">Don't forget to buy this stuff.</p>
+    <ul id = "purchases">
+      <li>A tin of beans</li>
+      <li class = "sale">Cheese</li>
+      <li class = "sale important">Milk</li>
+    </ul>
+    <!-- <p>This is just a test</p> -->
+    <script>
+    //  alert(typeof document.getElementById("purchases"));
+    //  alert(document.getElementsByTagName("li").length);
+    // var item = document.getElementsByTagName("li");
+    // for(var i=0;i<item.length;i++){
+    //   alert(typeof item[i]);
+    // }
+
+    // // 获取所有的元素节点数
+    // alert(document.getElementsByTagName("*").length);
+    
+    // // 获取purchases的元素节点数
+    // var shopping = document.getElementById("purchases");
+    // var item = shopping.getElementsByTagName("*");
+    // alert(item.length);
+
+    // alert(document.getElementsByClassName("important sale").length);
+
+    // function getElementsByClassName(node,className){
+    //   if(node.getElementsByClassName){
+    //     return node.getElementsByClassName(className);
+    //   }else{
+    //     var results = new Array();
+    //     var elems = node.getElementsByTagName(className);
+    //     for(var i=0;i<elems.length;i++){
+    //       if(elems[i].className.indexOf(className) != -1){
+    //         results[results.length] = elems[i];
+    //       }
+    //     }
+    //     return results;
+    //   }
+    // }
+    
+      var paras = document.getElementsByTagName("p");
+      for(var i = 0;i < paras.length ;i++){
+        // alert(paras[i].getAttribute("title"));
+        var title_text =  paras[i].getAttribute("title");
+        if(title_text != null){
+          alert(title_text);
+          paras[i].setAttribute("title","a new title_text");
+          alert(paras[i].getAttribute("title"));
+        }
+      }
+
+
+      // var shopping = document.getElementById("purchases");
+      // alert(shopping.getAttribute("title"));
+      // shopping.setAttribute("title","a list of goods");
+      // alert(shopping.getAttribute("title"));
+    </script>
+  </body>
+</html>
