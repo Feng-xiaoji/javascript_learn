@@ -1,0 +1,6 @@
+#slideshow{
+  width: 100px;
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+}
