@@ -14,6 +14,18 @@ function moveElement(eleID,fx,fy,interval){
     // return elem.style.color = "red";
     return true;
   }
+
+  if(!elem.style.left){
+    elem.style.left = "0px";
+  }
+  if(!elem.style.top){
+    elem.style.top = "0px";
+  }
+  // if(xpos<fx) {xpos++;}
+  // if(xpos>fx) {xpos--;}
+  // if(ypos<fy) {ypos++;}
+  // if(ypos>fy) {ypos--;}
+
   if(xpos<fx) {
     var dist = Math.ceil((fx-xpos)/10);
     xpos = xpos + dist
@@ -22,14 +34,21 @@ function moveElement(eleID,fx,fy,interval){
     var dist = Math.ceil((xpos-fx)/10);
     xpos = xpos - dist;
   }
+  if(ypos<fy) {
+    var dist = Math.ceil((fy-ypos)/10);
+    ypos = ypos + dist
+  }
+  if(ypos>fy) {
+    var dist = Math.ceil((ypos-fy)/10);
+    ypos = ypos - dist;
+  }
 
   // if(xpos != fx){
   //   var dist = Math.ceil((fx-xpos)/100);
   //   xpos = xpos + dist;
   // }
 
-  if(ypos<fy) {ypos++;}
-  if(ypos>fy) {ypos--;}
+  
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";
   var repeat ="moveElement('" + eleID + "'," + fx + "," + fy + "," + interval +")";
